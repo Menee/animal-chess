@@ -3,6 +3,7 @@
 Animal chess game “component” implemented using HTML, CSS and JS。 HTML斗兽棋组件。
 
 Chrome、Firefox均可使用，IE似乎不能用。
+打开 [https://menee.github.io/animal-chess/demo.html]https://menee.github.io/animal-chess/demo.html 预览效果
 
 ## 使用方法
 
