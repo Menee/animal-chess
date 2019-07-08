@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./game.js"> </script>
+    <link rel="stylesheet" href="./page-style.css">
+    <title>Document</title>
+</head>
+
+<body id="body">
+    <div id="forgame">
+        <h1>斗兽棋</h1>
+        <div id="animal-chess"></div>
+        <div id="btnGroup">
+            <label id="player" class="red">下一个：红方</label>
+            <button onclick="switchTo('./styles/plain/style.css')">样式A</button>
+            <button onclick="switchTo('./styles/image-style/style.css')">样式B</button>
+            <button onclick="restartGame()">重新开始</button>
+        </div>
+    </div>
+    <div id="rules">
+        <h2>规则</h2>
+        <ul>
+            <li>自强至弱：象、狮、虎、豹、狼、狗、猫、鼠</li>
+            <li>强吃弱，老鼠吃大象；强弱相同，同归于尽</li>
+            <li>老虎和狮子可以在没有老鼠挡住的时候跳过河（蓝色）（左右方向）</li>
+            <li>老鼠可以游过河；其他动物只能在陆地上一次行走一格</li>
+            <li>不可以走进己方兽穴（红色）</li>
+            <li>在敌方陷阱时可以被敌方任意棋子吃掉（绿色）</li>
+            <li>轮流下棋，红方先手，进入敌方兽穴时判断为胜利</li>
+        </ul>
+    </div>
+    <script>
+        function playerChanged(color){
+            let ele = document.getElementById("player");
+            ele.classList.remove("red");
+            ele.classList.remove("blue");
+            ele.classList.add(color);
+        }
+
+        function restartGame(){
+            let ele = document.getElementById("animal-chess");
+            ele.innerHTML = "";
+            new document.GameController(function (msg) {
+                alert(msg+" wins");
+            },playerChanged);
+        }
+
+        function switchTo(path){
+            let link = document.getElementById("game-style")
+            link.href = path;
+        }
+
+        new document.GameController(function (msg) {
+                alert(msg+" wins");
+        },playerChanged,"./styles/plain/style.css");
+    </script>
+    
+</body>
+
+</html>

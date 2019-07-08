@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    padding-top: 15px;
+    text-align: center;
+    font-family: 微软雅黑, 黑体;
+    color: #689f38;
+    font-weight: normal;
+    font-size: 3em;
+    margin-bottom: 40px;
+}
+
+body{
+    text-align: center;
+}
+
+#forgame{
+    float: right;
+    width: 70%;
+    text-align: center;
+}
+
+#animal-chess{
+    display: inline-block;
+}
+
+#rules{
+    padding-left: 50px;
+    padding-top: 100px;
+    text-align: left;
+    float: right;
+    width: 30%;
+}
+
+h2{
+    padding-bottom: 15px;
+}
+
+button{
+    margin: 15px;
+}
+
+label{
+    margin: 15px;
+}
+
+label.red{
+    color: red;
+}
+
+label.blue{
+    color: blue;
+}

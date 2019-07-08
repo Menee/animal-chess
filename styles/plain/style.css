@@ -1,0 +1,73 @@
+/**
+    棋盘的大小可以同时更改三处的50px修改。
+ */
+
+
+div#animal-chess *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    cursor: default;
+    user-select: none;
+}
+
+div#animal-chess td{
+    width: 50px;
+    height: 50px;
+}
+
+div#animal-chess table{
+    background-color: #f1f8e9;
+}
+
+/*有填充不全的问题*/
+div#animal-chess td.block-lighter{
+    background-color: transparent;
+}
+
+div#animal-chess td.block-darker{
+    background-color: #dcedc8;
+}
+
+div#animal-chess td.block-home{
+    background-color: firebrick;
+}
+
+div#animal-chess td.block-trap{
+    background-color: darkolivegreen;
+}
+
+div#animal-chess td.block-river.block-lighter{
+    background-color: #e3f2fd;
+}
+
+div#animal-chess td.block-river.block-darker{
+    background-color: #bbdefb;
+}
+
+div#animal-chess div.chess{
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    text-align: center;
+    line-height: 50px;
+    background-color: yellow;
+    font-size: 1.5em;
+    opacity: 0;
+}
+
+div#animal-chess div.chess-red{
+    color: red;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+div#animal-chess div.chess-blue{
+    color: blue;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+div#animal-chess div.chess-selected{
+    background-color: rgba(0,0,0,0.5);
+}
