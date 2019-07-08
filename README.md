@@ -73,7 +73,7 @@ let controller = new document.GameController(
 * 棋子
 
   * `#chess-animal div.chess`：棋子或者棋子的占位符（每一个`td`内都有这样一个`div`）
-  * `#chess-animal div.chess.chess-type-i `(![img](file:///C:/Users/wweih/AppData/Local/Temp/msohtmlclip1/01/clip_image016.png))：分别为象，狮，…，鼠棋子
+  * `#chess-animal div.chess.chess-type-i `(i=1,2,...,8)：分别为象，狮，…，鼠棋子
   * `#chess-animal div.chess-red`：红方（先手方）棋子。虽然不一定要画成红色。
   * `#chess-animal div.chess-blue`：蓝方（后手方）棋子。虽然也不一定要画成蓝色。
   * `#chess-animal chess-selected`：当前被选中的棋子。
